@@ -1,0 +1,234 @@
+
+<!-- header.php -->
+
+<!DOCTYPE html>
+<html  lang="en">
+    <head>
+        <title>Your Website</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Link to your custom styles -->
+        <!-- Link to Bootstrap CSS -->
+        <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"> 
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        
+        <!-- Move the JavaScript includes to the <head> section -->
+        
+        <!-- Your custom scripts -->
+        <script src="../js/navbar.js"></script>
+        <script src="../js/register_validation.js"></script>
+        <script src="../js/login_val.js"></script>
+    </head>
+    
+<body>
+
+    
+<div class="container-fluid">
+
+    <nav class="navbar navbar-expand-lg navbar-light  px-3">
+        <a class="navbar-brand" href="#"><img src="../assets/bookse.png" height="70px" alt="BookSe "></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse px-5 pt-3 justify-content-between" id="navbarNav">
+
+
+            <ul class="nav nav-underline">
+                <li class="nav-item">
+                    <a class="nav-link  " aria-current="page"
+                        href="../pages/home.php">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="../pages/explore.php"> Explore
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../pages/sellings.php">Sellings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="../pages/orders.php">Orders</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="../pages/aboutus.php">About us
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/profile.php">
+                        <i class="fas fa-user fa-lg"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/logout.php"> <i class="fas fa-sign-out-alt fa-lg"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+</div>    <!-- Rest of the page content -->
+
+
+<div class="container mt-5">
+
+    <div class="row">
+        <!-- Left Section with Image -->
+
+        <div class="col-md-8">
+
+            <div class="shadow rounded-2 orderpage">
+                <div id="imageCarousel" class="carousel slide h-100 w-100" data-bs-ride="carousel"
+                    data-bs-interval="3000">
+                    <div class="carousel-inner h-100 w-100">
+                        
+                            <div class="carousel-item h-100 w-100 d-flex justify-content-center active"
+                                style="background-color:black">
+                                <img src="../images_for_db/book_8_image_64dbbdd36ce64_as.jpg" alt="Book Image" class="d-block h-100">
+                            </div>
+
+                            
+                            <div class="carousel-item h-100 w-100 d-flex justify-content-center "
+                                style="background-color:black">
+                                <img src="../images_for_db/book_8_image_64dbbdd36da3e_as.jpeg" alt="Book Image" class="d-block h-100">
+                            </div>
+
+                            
+                            <div class="carousel-item h-100 w-100 d-flex justify-content-center "
+                                style="background-color:black">
+                                <img src="../images_for_db/book_8_image_64dbbdd36e43c_as.jpeg" alt="Book Image" class="d-block h-100">
+                            </div>
+
+                            
+                            <div class="carousel-item h-100 w-100 d-flex justify-content-center "
+                                style="background-color:black">
+                                <img src="../images_for_db/book_8_image_64dbbdd36ee39_as.jpeg" alt="Book Image" class="d-block h-100">
+                            </div>
+
+                                                </div>
+                    <!-- Controls -->
+                    <a class="carousel-control-prev" href="#imageCarousel" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#imageCarousel" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </a>
+                </div>
+                <!-- Thumbnail List -->
+
+            </div>
+
+
+
+        </div>
+
+        <!-- Right Section with Carousel and Product Details -->
+        <div class="col-md-4">
+            <div class="row h-100">
+                <div class="col-12">
+                    <h2>Product Details</h2>
+                                        <p>Book ID:
+                        8                    </p>
+                    <p>Title:
+                        as                    </p>
+                    <p>Description:
+                        dsfz                    </p>
+                    <p>stock:
+                        0                    </p>
+                    <p>Description:
+                        6.00                    </p>
+                    <!-- Add more details as needed -->
+                </div>
+                <div class="col-12">
+                    
+                                        <button class="btn btn-primary buy-btn" data-bs-toggle="modal"
+                        data-bs-target="#buyModal">Buy</button>
+
+                    <a href="adre_cart.php?user_id=1&book_id=8&action=add"
+                        class="btn btn-warning">
+                        Add to Cart                    </a>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="buyModal" tabindex="-1" aria-labelledby="buyModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="buyModalLabel">Buy Product</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="buy_book.php" method="post">
+                    <input type="hidden" name="book_id" id="book_id_input" value=8>
+                    <input type="hidden" name="buyer_id" id="book_id_input" value=1>
+                    <input type="hidden" name="seller_id" id="book_id_input" value=1>
+                    <input type="hidden" name="total_amount" id="book_id_input" value=6.00>
+
+                    <label for="quantityInput" class="form-label">Quantity:</label>
+                                        <select class="form-select" id="quantityInput" name="quantity">
+                                            </select>
+
+                    <label for="addressSelect" class="form-label mt-3">Select Address:</label>
+
+                    <select class="form-select" id="addressSelect" name="shippaddr">
+                        <option value='10'>5-110,Santa bazaar, eeeeeeeeee ANNAMAYYA Andhra Pradesh India 517370</option><option value='16'>6-110,Santa bazaar, tyhshshyh ANNAMAYYA Andhra Pradesh India 517370</option><option value='17'>6-110,Santa bazaar, rrrrrrrrrrr ANNAMAYYA Andhra Pradesh India 517370</option>                    </select>
+
+                    <button type="submit" class="btn btn-primary">Buy Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Footer content, scripts, etc. -->
+    <!-- Link to Bootstrap JS -->
+
+    <div id="carouselExample" class="carousel slide h-50">
+        <div class="carousel-inner">
+            <div class="carousel-item h-100 w-100 d-flex justify-content-center active"
+            style="background-color:black">
+            <img src="../images_for_db/book_8_image_64dbbdd36ce64_as.jpg" alt="Book Image" class="d-block h-100">
+        </div>
+
+        
+        <div class="carousel-item h-100 w-100 d-flex justify-content-center "
+            style="background-color:black">
+            <img src="../images_for_db/book_8_image_64dbbdd36da3e_as.jpeg" alt="Book Image" class="d-block h-100">
+        </div>
+
+        
+        <div class="carousel-item h-100 w-100 d-flex justify-content-center "
+            style="background-color:black">
+            <img src="../images_for_db/book_8_image_64dbbdd36e43c_as.jpeg" alt="Book Image" class="d-block h-100">
+        </div>
+
+        
+        <div class="carousel-item h-100 w-100 d-flex justify-content-center "
+            style="background-color:black">
+            <img src="../images_for_db/book_8_image_64dbbdd36ee39_as.jpeg" alt="Book Image" class="d-block h-100">
+        </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+</body>
+</html>
+
+<div class="container text-center mt-4">
+    <p>Kammaluri Rajesh (ID: R190812) | Vinay Gowdu (ID: R190785)</p>
+</div>
